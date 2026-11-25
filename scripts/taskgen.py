@@ -274,6 +274,16 @@ def _finish(out_dir: str, case: dict, task: str, files: list, emap: list,
     patch.setdefault("instruction_echo",
                      _flat(case.get("task_instruction") or "")[:400])
     out = {
+        "diagnostics": {
+            "artifacts": len(files),
+            "checks_total": len(checks),
+            "checks_passed": sum(1 for c in checks if c.get("status") == "pass"),
+            "failed_checks": [c.get("check_id") for c in checks
+                              if c.get("status") != "pass"],
+            "quote_entries": len(emap),
+            "uncertainty_items": len(unc),
+            "self_verdict": _verdict(checks),
+        },
         "editable_sources": files,
         "exports": patch.pop("_exports", None) or [{
             "export_id": f"{task}_deliverables",
