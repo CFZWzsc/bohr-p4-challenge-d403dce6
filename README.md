@@ -2,9 +2,9 @@
 
 本题：写作14｜基金申请书写作（challenge-d403dce6，赛道 writing）。
 
-能力定位：在保留原始事实（数字、单位、引用、图表编号、专有名词）的前提下改写与扩写学术文本，产出可直接落盘的成稿，并给出逐条可核验的变更记录
+能力定位：写出科学问题、研究目标、研究方案、创新点、研究基础、预算与进度六节；预算与日期材料未给出时留空待填，不编造。
 
-交付物：result.json（契约齐全）、改写稿、evidence_map、change_log
+交付物：grant-section.md、requirements-map.json、promise-ledger.json、budget-timeline.md
 
 
 ## 这个 Skill 做什么
